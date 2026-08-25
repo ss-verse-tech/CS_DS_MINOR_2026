@@ -11,7 +11,7 @@
 #         return f"Parent can sing"
 
 # class Child(Parent):
-#     def __init__(self, height, weight, color, eye_color,):
+#     def __init__(self, height, weight, color, eye_color):
 #         self.eye_color = eye_color
 #         super().__init__(height, weight, color);
 
