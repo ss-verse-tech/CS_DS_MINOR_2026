@@ -23,11 +23,6 @@
 # s = Subchild("Mohit", 4, "black","Brown")
 # print(s.name)
 
-
-
-
-
-
 #  Keyword Argument
 # class Parent:
 #     def __init__(self, name , age , **kwargs):
@@ -70,7 +65,7 @@
 #     def sing(self):
 #         return "B can sing"
 
-# class C(B, A):
+# class C(B,A):
 #     def dance(self):
 #         return "C can dance"
 
