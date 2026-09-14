@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% block title %}home{% endblock  %} </title>
 </head>
 <body>
-    <h1>I am an HTML FILE rendering for home page</h1>
+    <h1>I am header</h1>
+    {% block content %}
+    <p>I am home content</p>
+    {% endblock content %}
 </body>
 </html>

@@ -10,3 +10,7 @@ def product_id(request,**args):
 
 def show_year(request, year):
     return HttpResponse(f"<h1>My year is {year}</h1>")
+
+
+def product_list(request):
+    return render(request, "product_list.html")
