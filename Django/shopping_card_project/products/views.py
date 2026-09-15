@@ -11,6 +11,20 @@ def product_id(request,**args):
 def show_year(request, year):
     return HttpResponse(f"<h1>My year is {year}</h1>")
 
-
 def product_list(request):
-    return render(request, "product_list.html")
+    class harsh:
+        def __init__(self, room_mate):
+            self.room_mate = room_mate
+    data = {
+        "name":"Harsh Ujala",
+        "hobbies": ["Swimming", "Dance"],
+        "age":17,
+        "goal": "COO (chief opertaing officer)",
+        "Harsh":harsh("Raghav"),
+        "Profession": "I am professsionally learner",
+        "company":["Flipkart", "amazon"]
+
+    }   
+    return render(request, "product_list.html", {"data":data })
+    # return render(request, "product_list.html", data)
+    # Data can be pass in two ways

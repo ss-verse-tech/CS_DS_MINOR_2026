@@ -5,5 +5,26 @@
 {% endblock  %}
 
 {% block content %}
-I am product page
+I am product page 
+
+{% comment %} <p>my data is : {{data}}</p> {% endcomment %}
+<p>my name is {{name}} my hobbie is {{hobbies}}</p>
+<p>my name is {{data.name}} my hobbie are {{data.hobbies}}</p>
+<p>My super hobbie is {{data.hobbies.0}}</p>
+<p>{{data.Harsh.room_mate}}</p>
+<p>{{data.name | upper}}</p>
+<p>{{data.Profession | truncatewords:2}}</p>
+<p>Profession: {{data.Profession | linebreaks}}</p>
+
+{% comment %} {% if data.age <= 21 %}
+<p>I am in young age</p>
+{% else %}
+<p>I am in old age</p>
+{% endif %} {% endcomment %}
+
+{% if data.age <= 19 %}
+<p>I am teen ager</p>
+{% elif data.age > 19 %}
+<p>I have been cross teen_age</p>
+{% endif %}
 {% endblock content %}
