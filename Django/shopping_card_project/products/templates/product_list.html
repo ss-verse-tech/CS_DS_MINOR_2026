@@ -21,10 +21,32 @@ I am product page
 {% else %}
 <p>I am in old age</p>
 {% endif %} {% endcomment %}
-
+{% comment %} 
 {% if data.age <= 19 %}
 <p>I am teen ager</p>
 {% elif data.age > 19 %}
 <p>I have been cross teen_age</p>
+{% endif %} {% endcomment %}
+<p>I do have {{data.student | length}} of student{{data.student | pluralize}}</p>
+
+
+
+{% if data.age <= 19 %}
+<p>I am under teen_age</p>
+
+{% elif age > 19 and age <= 40 %}
+<p>I am under young age</p>
+
+{% else %}
+<p>I am under old age</p>
 {% endif %}
+
+<p>My studenst are {{data.student}}</p>
+<p>Oth index of student is  {{data.student.0}}</p>
+<p>1st index of student is  {{data.student.1}}</p>
+
+{% for data in data.student %}
+<p>{{data}}</p>
+{% endfor %}
+
 {% endblock content %}

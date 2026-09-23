@@ -22,8 +22,8 @@ from shopping_card_project import views
 from ratings import views as rating_views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.home),
-    path("about/", views.about),
+    path("", views.home, name="home"),
+    path("about/", views.about, name="about"),
     path("product/", include("products.urls")),
     path("rating/", rating_views.rating),
 ]

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student_info</title>
+</head>
+<body>
+    <h1>Student information page</h1>
+    {% comment %} <p>{{data}}</p>
+    <p>{{data.students_record}}</p> {% endcomment %}
+
+    <table border = "1" cellpadding = "0    ">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Course</th>
+            <th>Email</th>
+            <th>Marks</th>
+            <th>Attendence</th>
+        </tr>
+        {% for data in data.students_record %}
+        <tr style = "background-color: {% cycle "blue" "red" "green" "yellow"%}; color:white">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.city}}</td>
+            <td>{{data.course}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.marks}}</td>
+            <td>{{data.attendance}}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

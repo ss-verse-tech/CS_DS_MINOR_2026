@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from . import data
 # Create your views here.
 
 def product_home_page(request):
@@ -18,13 +19,16 @@ def product_list(request):
     data = {
         "name":"Harsh Ujala",
         "hobbies": ["Swimming", "Dance"],
-        "age":17,
+        "age":40,
         "goal": "COO (chief opertaing officer)",
         "Harsh":harsh("Raghav"),
         "Profession": "I am professsionally learner",
-        "company":["Flipkart", "amazon"]
-
+        "student":["Rohit", "Mohit", "Sohan"],
     }   
     return render(request, "product_list.html", {"data":data })
     # return render(request, "product_list.html", data)
     # Data can be pass in two ways
+
+
+def student_information(request):
+    return render(request, "student_info.html", {"data":data})
