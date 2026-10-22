@@ -1,17 +1,66 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 <body>
-    <ul>
-        {% comment %} <li><a href="{% url "home" %}">Home</a></li>
-        <li><a href="{% url "about" %}">About</a></li>
-        <li><a href="">Contact</a></li> {% endcomment %}
-        <li><a href="{% url "home" %}">Home</a></li>
-        <li><a href="{% url "about" %}">About</a></li>
-    </ul>
+    <header>
+        <img class='logo' src="{% static "images/image.png" %}" alt="">
+        
+        <div class = "location_box">
+            <img class = "location_icon" src="{% static "images/location.png" %}" alt="">
+
+            <div class = "text_box">
+                <p class = "location_text">Delivering to sonipat </p>
+                <p class = "update_location_text">Update location</p>
+            </div>
+        </div>
+
+       <div class = "dropdown_box">
+            <select name="" id="">
+                <option value="">All</option>
+                <option value="">1</option>
+                <option value="">1</option>
+                <option value="">1</option>
+                <option value="">1</option>
+                <option value="">1</option>
+            </select>
+            <input type="text" class = "search_box">
+            
+            <div class = "magnifying_icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div> 
+
+        <select name="" id="" class = "language_dropdown">
+            <option value="">🇮🇳 EN</option>
+            <option value="">🇮🇳 1</option>
+            <option value="">🇮🇳 1</option>
+            <option value="">🇮🇳 1</option>
+        </select>
+
+        <div class = "Account_section" id = "Account_section">
+            <p>Hello, Sign in</p>
+            <p>Account and lists</p>
+        </div>
+
+        <div class = "return_and_order_box">
+            <p>Returns</p>
+            <p>& order</p>
+        </div>
+
+        <div class = "cart_count">
+            <p class = "zero_text">0</p>
+            <div class = "sub_cart_count">
+                <p>🛒</p>
+                <p class = "cart_text">Cart</p>
+            </div>
+        </div>
+    </header>
 </body>
 </html>

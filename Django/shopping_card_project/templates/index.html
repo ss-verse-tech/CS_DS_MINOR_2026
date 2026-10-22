@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="{% static "css/index.css" %}">
 </head>
 <body>
-    {% include "navbar.html" %}
-    <h1>I am header</h1>
-    {% block content %}
-    <p>I am home content</p>
-    {% endblock content %}
-    {% include "footer.html" %}
+        {% include "navbar.html" %}
+        {% include "sub_navbar.html" %}
+        {% include "carousel.html" %}
+    </div>
+    <script src = "{% static "js/sidebar.js" %}"></script>
 </body>
 </html>

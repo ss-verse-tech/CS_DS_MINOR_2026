@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showing Data</title>
+</head>
+<body>
+    <h1>I am showing Data of the Students</h1>
+    {% for data in std_data %}
+    <p>name : {{data.name}}</p>
+    <p>age : {{data.age}}</p>
+    <p>department : {{data.department}}</p>
+    <p>date : {{data.date}}</p>
+    {% endfor %}
+</body>
+</html>

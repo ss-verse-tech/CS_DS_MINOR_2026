@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/sub_navbar.css" %}">
+</head>
+<body>
+    <div>
+        <header class = "container">
+            <div class = "hamburger_content_box">
+                <i onclick = "show_side_bar()" class="fa-solid fa-bars"></i>
+                <p>All</p>
+            </div>
+        </header>
+    </div>
+    
+    <div onclick="hide_side_bar()" class = "overlay"></div>
+
+
+    <div class = "sidebar">
+        <div class = "side_desk">
+            <div class = "profile_items">
+                <i class="fa-solid fa-circle-user "></i>
+                <p class = "text_sign_in">Hello, sign in</p>
+            </div>
+
+            <div class = "content_box">
+                {% for data in products %}
+                <h2>{{data.title}}</h2>
+                {% for item in data.items %}
+                <p>{{item.name}}</p>
+                {% endfor %}
+                <hr>
+                {% endfor %}
+            </div>
+        </div>
+        <div onclick="hide_side_bar()" class = "cross_button">
+            <i  class="fa-solid fa-x" style="color: rgb(255, 255, 255);"></i>
+        </div>
+    </div>
+    <script src = "{% static "js/sidebar.js" %}"></script>
+</body>
+</html>
