@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="{% static "add_task.css" %}">
+</head>
+<body>
+    <div class="add_task_bar">
+        {% include "navbar.html" %}
+
+        <div class="add_task_box">
+            <h1>Edit Task</h1>
+
+            <form action="{% url "edit_task" task_data.id %}" method="post">
+                {% csrf_token %}
+                <label for="title">Title:</label><br>
+                <input type="text" name="title" id="title" value={{ task_data.title }}><br><br>
+                <label for="description">Description:</label><br>
+                <input type="textarea" name="description" id="description" value={{ task_data.description }}><br>
+               
+                <div class="btn_box">
+                    <button type="submit" class="save">Save</button>
+                    <button type="submit" class="cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

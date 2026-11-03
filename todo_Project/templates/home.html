@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="{% static "home.css" %}">
+</head>
+<body>
+    <div class="parent_box">
+        {% include "navbar.html" %}
+
+        <div class="tsk_box">
+            <h1>All Tasks</h1>
+            <table>
+                <tr class="text_data_col">
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Done</th>
+                    <th>Created</th>
+                    <th>Actions</th>
+                </tr>
+
+                {% for data in data %}
+                <tr class="text_data_row">
+                    <td>
+                        {{ data.title }}
+                    </td>
+                    <td>
+                        {{ data.description }}
+                    </td>
+                     <td>
+                        {{ data.done }}
+                    </td>
+                    
+                    <td>{{ data.created }}</td>
+
+                   
+                    <td>
+                        <input type="checkbox">
+                    </td>
+
+                    <td>
+                        <a href="{% url "edit_task" data.id %}">Edit</a>
+                        <a href="{% url "delete_task" data.id %}">Delete</a>
+                    </td>
+                  
+                </tr>
+                {% empty %}
+                <tr class="parent_text_data">
+                    <td class="No_task_text" colspan="5">
+                        No Task Yet
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>

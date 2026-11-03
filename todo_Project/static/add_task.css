@@ -1,0 +1,38 @@
+.add_task_box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add_task_bar{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.btn_box{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+.save{
+    background-color: #087BFF;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    padding: 5px 10px;
+}
+
+.cancel{
+    background-color: #778087;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    padding: 5px 10px;
+}
+input{
+    width: 100%;
+    border: 2px solid #F6F6F7;
+}

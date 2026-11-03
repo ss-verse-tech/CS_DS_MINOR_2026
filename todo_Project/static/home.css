@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.parent_box{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.tsk_box{
+    margin-top: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+table{
+    width: 100%;
+    margin-top: 10px;
+    
+}
+
+.No_task_text{
+    padding-left: 30px;
+    padding-top: 10px;
+    background-color: #FAFAFC;
+
+}
+
+.parent_text_data{
+    margin-top: 20px;
+
+}
+
+.text_data_row{
+    text-align: start;
+    background-color: #FAFAFC;
+
+
+}
+
+.text_data_col{
+    text-align: left;
+}
